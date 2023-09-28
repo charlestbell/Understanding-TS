@@ -5,12 +5,15 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server",
-    "ts watch": "tsc -w"
+    "start": "concurrently 'lite-server' 'tsc -w'",
+    "ts_watch": "tsc -w"
   },
   "author": "Maximilian Schwarzmüller",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.1"
   }
 }
